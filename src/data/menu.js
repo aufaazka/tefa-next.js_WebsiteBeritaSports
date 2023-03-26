@@ -4,19 +4,17 @@ export const menu = [
     href: '/',
   },
   {
-    label: 'About Us',
-    href: '/About',
-  },
-  {
-    label: 'Favorite',
+    label: 'News',
     href: '/Product',
   },
   {
-    label: 'Contact',
-    href: '/Contact',
+    label: 'History',
+    href: '/About',
   },
   {
-    label: 'Fetch',
-    href: 'Fetch',
+    label: 'Matches',
+    href: '/Contact',
   },
+  
+
 ]

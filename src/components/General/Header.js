@@ -20,8 +20,8 @@ export default function Header() {
   }
 
   return (
-    <header className=" border-slate-500 mb-5 bg-orange-900">
-      <div className="flex justify-between mx-10 text-white items-center">
+    <header className=" border-slate-500 mb-5 bg-zinc-300">
+      <div className="flex justify-between mx-10 text-blue-900 font-bold items-center">
         <div className="flex gap-2 items-center">
           <div>
             <Image
@@ -32,11 +32,17 @@ export default function Header() {
               className="w-full mt-6 md:w-fit  h-full object-cover "
             />
           </div>
-          <div>
-            <Link href="/" className="">
-              <a>KOFU</a>
-            </Link>
-          </div>
+          <div className="mx-7">
+          <a
+            href="/"
+            className="flex items-center justify-start uppercase text-2xl md:text-3xl text-blue-900 font-bold hover:text-black"
+          >
+            G
+            <span className="w-60 text-rose-500 hover:text-blue-900">
+              Arena
+            </span>
+          </a>
+        </div>
         </div>
 
         <div className="mr-2 sm:block hidden justify-between">

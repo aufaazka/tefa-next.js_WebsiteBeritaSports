@@ -12,7 +12,7 @@ const ImageCard = ({ image }) => {
         className="w-full h-35 md:h-48 object-contain p-2 my-5"
       />
       <div className="px-6 py-8">
-        <div className="font-extrabold text-blue-700 text-lg text-justify mb-3">
+        <div className="font-extrabold text-lg text-justify mb-3">
           {image.name}
         </div>
         <div className="text-black">

@@ -6,13 +6,18 @@ export default function Home() {
   return (
     <div className="flex flex-col lg:flex-row lg:space-x-10">
       <Head>
-        <title>Korean Food</title>
+        <title>GArena</title>
         <meta
           name="description"
-          content="Home page Maharani B'anica Putri Portfolio"
+          content="GArena ready to football news"
         />
       </Head>
-      <div className="grid place-content-center text-center lg:text-left">
+      <div classNames >
+      <span className="grid place-content-center text-center font-bold text-5xl mb-12 mt-[18px] bg-red-500 ">
+        Trending News
+      </span>
+      </div>
+      {/* <div className="grid place-content-center text-center lg:text-left">
         <h1 title="Mathilde Langevin" className="text-[80px] leading-[70px]">
           KOFU
         </h1>
@@ -36,15 +41,15 @@ export default function Home() {
             </a>
           </Link>
         </nav>
-      </div>
+      </div> */}
      
-      <div className="mt-10 w-1/2 h-[300px] lg:w-1/2 lg:h-[700px] lg:mt-0 mx-auto">
+      {/* <div className="mt-10 w-1/2 h-[300px] lg:w-1/2 lg:h-[700px] lg:mt-0 mx-auto">
         <img
           src="/photo/pexels-mathilde-langevin-home.jpg"
           alt="Mathilde"
           className="w-full h-full object-cover"
         />
-      </div>
+      </div> */}
     </div>
   )
 }
