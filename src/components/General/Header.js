@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { menu } from '@/data/menu'
-import img from '../../../public/photo/logo.png'
+import img from '../../../public/photo/Logo11.png'
 import Image from 'next/image'
 
 export default function Header() {

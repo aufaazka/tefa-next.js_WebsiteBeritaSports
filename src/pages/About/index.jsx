@@ -1,77 +1,63 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import TypewriterComponent from 'typewriter-effect'
 
-export default function AboutMe() {
-  const data = [
-    { gambar: '/photo/1.jpg', nama: 'Best Restaurant in Indonesia' },
-    { gambar: '/photo/2.jpg', nama: 'Best Kinerja 2023' },
-    { gambar: '/photo/3.jpg', nama: 'Restaurant terbersih di dunia' },
-    { gambar: '/photo/4.jpg', nama: 'Sertifikasi halal' },
+export default function index() {
+  const satu = [
+    { gambar: '/photo/sejarah-badminton.jpg', 
+    desc: 'Sejarah bulu tangkis di dunia mulanya muncul di Mesir sekitar 2000 tahun lalu. Namun beberapa sumber menyebut olahraga ini sejatinya juga berkembang di China dan India. Di China, permainan Jianzi dipercaya menjadi cikal bakal bulu tangkis. Jianzi sendiri merupakan permainan menggunakan kok atau yang saat ini kita sebut shuttlecock.' },
+    { gambar: '/photo/sejarah-voli.jpg', 
+    desc: 'Permainan bola voli diciptakan oleh William G. Morgan tahun 1895 di Massachuset. Awal mulanya dia menciptakan permainan bernama Mintonette untuk menggantikan permainan bola basket yang dianggap melelahkan. Jumlah pemain mintonette tidak ditentukan.' },
+    { gambar: '/photo/sejarah-basket.jpg', 
+    desc: 'Jika menelisik lebih jauh, sejarah bola basket dimulai pada 1891, yang diciptakan oleh seorang guru asal Kanada, Amerika Serikat bernama Dr. James Naismith. Alasan Naismith menciptakan olahraga basket karena dia ingin menggantikan olahraga di luar ruangan menjadi di dalam ruangan ketika musim dingin tiba.' },
+    { gambar: '/photo/sejarah-sepakbola.jpg', 
+    desc: 'Dilansir dari buku Bahan Ajar Sepakbola Dasar yang disusun Emral dari Universitas Negeri Padang (UNP), sejarah awal sepak bola terjadi pada era tahun 1122-247 sebelum Masehi (SM) di Cina. Saat itu, permainan ini dikenal dengan nama Tsu-Chiu. Tsu berarti kaki, Chiu berarti bola.' },
   ]
-
   return (
     <section
-      id="about KOFU"
+      id="about GArena"
       className="flex flex-col lg:gap-14 lg:flex-col w-full"
     >
       <Head>
-        <title>About KOFU</title>
-        <meta name="description" content="About Kofu" />
+        <title>About GArena</title>
+        <meta name="description" content="About GArena" />
       </Head>
-      <div className="wrapper flex flex-col-reverse md:flex-row gap-x-24 w-full">
-        <div className="mb-auto mt-8 space-y-5 w-80 md:w-1/3 grid place-content-center text-center md:text-left mx-auto md:mx-0">
-          <h1 className="text-5xl ">
-            <span className="font-bold">About KOFU</span>
-          </h1>
-          <p>Hallo!!👋</p>
-          <p className="text-justify">
-            Kofu adalah Restaurant pertama kali di Indonesia yang memiliki menu
-            beragam khas korea yang pas dengan lidah orang Indonesia. Kofu
-            didirikan pada tahun 2018. Menyediakan beragam menu viral spicy and
-            non-spicy. Memperoleh beragam sertifikat sebagai Best-Restaurant in
-            Indonesia dengan kelezatan masakan yang dijual, Penjualan yang
-            paling luar biasa di tahun 2023 karena sangat ramai pengunjung,
-            restaurant terbersih di dunia dengan tempat yang comfortable, dan
-            sudah mendapatkan sertifikasi halal sehingga muslim juga dapat
-            menikmati masakan dari korea
-          </p>
-          <br />
-          Alamat : Jl. Amazon Kota Jakarta Timur
-        </div>
-        <div className="w-full md:w-2/3 mt-10 lg:mt-0 mb-5 md:mb-0 md:h-[400px] md:mx-auto  ">
-          {/* video youtube */}
-          <iframe
-            className="w-full h-full aspect-video"
-            width={'auto'}
-            height={'auto'}
-            src="https://www.youtube.com/embed/fFaEIQacPCo"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
+      <div className="mb-auto mt-8 space-y-5 w-80 md:w-1/3 grid place-content-center text-center mx-auto md:mx-0">
+        <h1 className="text-5xl font-medium w-[800px]">
+          <TypewriterComponent
+            options={{
+              strings: ['History'],
+              changeDelay: 3,
+              changeDeleteSpeed: 2,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h1>
       </div>
 
-      <span className="text-center font-bold text-5xl mb-12 mt-[18px] ">
-        Our Certificate
-      </span>
-      <div className="mb-24 flex gap-8 py-9 lg:flex-row flex-wrap justify-center mx-auto">
-        <ul className="grid grid-cols-2 md:grid-cols-4">
-          {data.map((data) => (
-            <li className="bg-orange-900 rounded-md overflow-hidden mx-8 mb-4 w-36 md:w-60 hover:shadow-2xl text-left p-4">
-              <Image
-                width={300}
-                height={350}
-                src={data.gambar}
-                alt=""
-                className="w-72 md:w-80 h-24 md:h-44 items-center object-contain rounded-md mx-auto mb-2"
-              />
-              <p className="text-base mb-2 text-white text-center">
-                <strong>{data.nama}</strong>
-              </p>
-              <p className="text-sm mb-2">{data.tanggal}</p>
+      <div className="mb-30 justify-center mx-automax w-full max-h-fit">
+        <ul className="">
+          {satu.map((item, index) => (
+            <li
+              className={`flex flex-rowbox-border md:box-content bg-zinc-300 rounded-md overflow-hidden mx-8 mb-4  hover:shadow-2xl text-left p-4 ${
+                index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+              }`}
+              key={index}
+            >
+              <div className={`order-${index % 2 === 0 ? '1' : '2'}`}>
+                <img src={item.gambar} alt="image" className="" />
+              </div>
+              <div className={`order-${index % 2 === 0 ? '2' : '1'}`}>
+                <p className='px-10'>  
+                  {index % 2 === 0
+                    ? ''
+                    : ''}{
+                      item.desc
+                    }
+                </p>
+              </div>
             </li>
           ))}
         </ul>
