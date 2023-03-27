@@ -5,14 +5,22 @@ import TypewriterComponent from 'typewriter-effect'
 
 export default function index() {
   const satu = [
-    { gambar: '/photo/sejarah-badminton.jpg', 
-    desc: 'Sejarah bulu tangkis di dunia mulanya muncul di Mesir sekitar 2000 tahun lalu. Namun beberapa sumber menyebut olahraga ini sejatinya juga berkembang di China dan India. Di China, permainan Jianzi dipercaya menjadi cikal bakal bulu tangkis. Jianzi sendiri merupakan permainan menggunakan kok atau yang saat ini kita sebut shuttlecock.' },
-    { gambar: '/photo/sejarah-voli.jpg', 
-    desc: 'Permainan bola voli diciptakan oleh William G. Morgan tahun 1895 di Massachuset. Awal mulanya dia menciptakan permainan bernama Mintonette untuk menggantikan permainan bola basket yang dianggap melelahkan. Jumlah pemain mintonette tidak ditentukan.' },
-    { gambar: '/photo/sejarah-basket.jpg', 
-    desc: 'Jika menelisik lebih jauh, sejarah bola basket dimulai pada 1891, yang diciptakan oleh seorang guru asal Kanada, Amerika Serikat bernama Dr. James Naismith. Alasan Naismith menciptakan olahraga basket karena dia ingin menggantikan olahraga di luar ruangan menjadi di dalam ruangan ketika musim dingin tiba.' },
-    { gambar: '/photo/sejarah-sepakbola.jpg', 
-    desc: 'Dilansir dari buku Bahan Ajar Sepakbola Dasar yang disusun Emral dari Universitas Negeri Padang (UNP), sejarah awal sepak bola terjadi pada era tahun 1122-247 sebelum Masehi (SM) di Cina. Saat itu, permainan ini dikenal dengan nama Tsu-Chiu. Tsu berarti kaki, Chiu berarti bola.' },
+    {
+      gambar: '/photo/sejarah-badminton.jpg',
+      desc: 'Sejarah bulu tangkis di dunia mulanya muncul di Mesir sekitar 2000 tahun lalu. Namun beberapa sumber menyebut olahraga ini sejatinya juga berkembang di China dan India. Di China, permainan Jianzi dipercaya menjadi cikal bakal bulu tangkis. Jianzi sendiri merupakan permainan menggunakan kok atau yang saat ini kita sebut shuttlecock.',
+    },
+    {
+      gambar: '/photo/sejarah-voli.jpg',
+      desc: 'Permainan bola voli diciptakan oleh William G. Morgan tahun 1895 di Massachuset. Awal mulanya dia menciptakan permainan bernama Mintonette untuk menggantikan permainan bola basket yang dianggap melelahkan. Jumlah pemain mintonette tidak ditentukan.',
+    },
+    {
+      gambar: '/photo/sejarah-basket.jpg',
+      desc: 'Jika menelisik lebih jauh, sejarah bola basket dimulai pada 1891, yang diciptakan oleh seorang guru asal Kanada, Amerika Serikat bernama Dr. James Naismith. Alasan Naismith menciptakan olahraga basket karena dia ingin menggantikan olahraga di luar ruangan menjadi di dalam ruangan ketika musim dingin tiba.',
+    },
+    {
+      gambar: '/photo/sejarah-sepakbola.jpg',
+      desc: 'Dilansir dari buku Bahan Ajar Sepakbola Dasar yang disusun Emral dari Universitas Negeri Padang (UNP), sejarah awal sepak bola terjadi pada era tahun 1122-247 sebelum Masehi (SM) di Cina. Saat itu, permainan ini dikenal dengan nama Tsu-Chiu. Tsu berarti kaki, Chiu berarti bola.',
+    },
   ]
   return (
     <section
@@ -50,12 +58,9 @@ export default function index() {
                 <img src={item.gambar} alt="image" className="" />
               </div>
               <div className={`order-${index % 2 === 0 ? '2' : '1'}`}>
-                <p className='px-10'>  
-                  {index % 2 === 0
-                    ? ''
-                    : ''}{
-                      item.desc
-                    }
+                <p className="px-10">
+                  {index % 2 === 0 ? '' : ''}
+                  {item.desc}
                 </p>
               </div>
             </li>
