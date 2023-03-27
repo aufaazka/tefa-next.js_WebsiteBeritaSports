@@ -23,3 +23,50 @@ h1, h2, h3 {
 .logo{
   @apply font-PermanentMarker font-bold
 }
+.primary_btn {
+  background: #927D4D !important;
+  padding: 7px 25px !important;
+  border: 1px solid #ffff !important;
+  border-radius: 5px;
+}
+
+.primary_btn a {
+  text-decoration: none;
+  color: #ffff;
+  background: transparent !important;
+}
+
+.secondary_btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 7px 25px;
+}
+
+.secondary_btn a {
+  color: #fff !important;
+}
+.primary_btn a:hover,
+.secondary_btn a:hover {
+  color: #ffff;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: #808dad;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  background: #171f38;
+}
+
+@media only screen and (max-width: 992px) {
+  p {
+    font-size: 0.9rem !important;
+  }
+
+  .primary_btn a,
+  .secondary_btn a {
+    font-size: 0.9rem;
+  }
+}
