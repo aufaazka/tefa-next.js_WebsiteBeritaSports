@@ -7,7 +7,7 @@ import Link from 'next/link'
 function getFood(id) {
   const [data, setData] = useState([])
 
-  const url = 'https://api.jsonbin.io/v3/b/640fc5e9ebd26539d08e3227'
+  const url = 'https://api.jsonbin.io/v3/b/6421398eace6f33a22fdd266'
   useEffect(() => {
     async function getData() {
       try {
@@ -69,22 +69,26 @@ function Detail() {
 
           {/* Product's details */}
           <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6 mt-80 md:mt-24">
-            <h2 className="text-3xl font-semibold">{food.name}</h2>
-            <p>
+            <h2 className="text-3xl font-semibold">{food.headline}</h2>
+            {/* <p>
               <span className="text-gray-500">Availability:</span>{' '}
               <span className="font-semibold">{food.stock}</span>
+            </p> */}
+            <p className='w-80'>
+              Source : <a href={food.url} className="italic text-black hover:underline text-">{food.url}</a>
             </p>
-            <p className="mt-4">{food.description}</p>
+            <p className="mt-4">{food.desc}</p>
 
             {/* Price */}
-            <div className="mt-8 border-t pt-4">
+            {/* <div className="mt-8 border-t pt-4">
               <p className="text-gray-500">Price:</p>
               <p className="text-xl font-semibold">{food.price}</p>
-            </div>
-            <div className="mt-4 border-t pt-4">
-              <p className="text-gray-500">Quantity:</p>
+            </div> */}
+            <div className="mt-4 pt-4">
+                {/* <p className="text-gray-500">Quantity:</p> */}
+                <p className="mt-4">{food.date}</p>
               <div className="mt-1 flex items-center space-x-3">
-                <button
+                {/* <button
                   onClick={() => setQty((prev) => prev - 1)}
                   disabled={qty <= 1}
                   className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-rose-100 hover:text-orange-900 rounded-md p-1 border-0"
@@ -98,17 +102,17 @@ function Detail() {
                   className="hover:bg-green-100 hover:text-green-500 rounded-md p-1 border-0"
                 >
                   <Plus />
-                </button>
+                </button> */}
               </div>
               <div className="flex flex-col">
-                <button
+                {/* <button
                   type="button"
-                  // onClick={handleOnAddToCart}
-                  // disabled={adding}
+                  onClick={handleOnAddToCart}
+                  disabled={adding}
                   className="mt-8 border rounded py-2 px-6 bg-orange-900  hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed"
                 >
                   Add to cart ({total})
-                </button>
+                </button> */}
                 <div className="w-24 mt-5 border rounded py-2 px-8 bg-orange-900 hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed flex flex-row">
                   <Link href="/Product">Back</Link>
                 </div>

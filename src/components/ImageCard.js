@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ImageCard = ({ image }) => {
-  const descproduct = image.description
+  const descproduct = image.desc
   const res = descproduct.substr(0, 50)
 
   return (
