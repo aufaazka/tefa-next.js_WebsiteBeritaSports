@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
   const [data, setData] = useState([])
-  const url = 'https://api.jsonbin.io/v3/b/640fc5e9ebd26539d08e3227'
+  const url = 'https://api.jsonbin.io/v3/b/6421398eace6f33a22fdd266'
   useEffect(() => {
     async function getData() {
       try {
@@ -39,7 +39,7 @@ function App() {
     console.log(filterParam)
     const searchTerm = search.toLowerCase()
     const filteredData = data.filter((  item) =>
-      item.name.toLowerCase().includes(searchTerm)
+      item.headline.toLowerCase().includes(searchTerm)
     )
     setProduct(filteredData)
   }, [filterParam, search, data])
@@ -135,13 +135,13 @@ function App() {
                     />
                     <div className="px-6 py-2 mb-4 h-48">
                       <div className="font-extrabold text-orange-900 text-lg text-justify mb-3 -mt-5">
-                        {image.name}
+                        {image.headline}
                       </div>
                       <div className="text-black">
                         <ul>
-                          <li>{image.description}</li>
+                          <li>{image.desc}</li>
                           <li className="text-md m">
-                            <strong>{image.price}</strong>
+                            <strong>{image.date}</strong>
                           </li>
                         </ul>
                         <div className="bg-orange-900 p-2 w-16 h-10 text-center rounded text-white">
