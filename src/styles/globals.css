@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html {
-  @apply font-['poppins'] font-[poppins]
+  @apply font-['poppins'] font-[poppins] scroll-smooth !important
 }
 
 body {

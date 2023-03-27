@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
   const [data, setData] = useState([])
-
   const url = 'https://api.jsonbin.io/v3/b/640fc5e9ebd26539d08e3227'
   useEffect(() => {
     async function getData() {
