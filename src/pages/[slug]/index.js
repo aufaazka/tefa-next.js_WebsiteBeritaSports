@@ -57,7 +57,7 @@ function Detail() {
     <>
       <div className="container lg:max-w-screen-lg mx-auto py-24 px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12">
-          {/* Product's image */}
+          {/* News's image */}
           <div className="relative w-72 h-72 md:w-96 md:h-96 mb-12 ">
             <img
               src={food.image}
@@ -67,25 +67,14 @@ function Detail() {
             />
           </div>
 
-          {/* Product's details */}
+          {/* News's details */}
           <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6 mt-80 md:mt-24">
             <h2 className="text-3xl font-semibold">{food.headline}</h2>
-            {/* <p>
-              <span className="text-gray-500">Availability:</span>{' '}
-              <span className="font-semibold">{food.stock}</span>
-            </p> */}
             <p className='w-80'>
               Source : <a href={food.url} className="italic text-black hover:underline text-">{food.url}</a>
             </p>
             <p className="mt-4">{food.desc}</p>
-
-            {/* Price */}
-            {/* <div className="mt-8 border-t pt-4">
-              <p className="text-gray-500">Price:</p>
-              <p className="text-xl font-semibold">{food.price}</p>
-            </div> */}
             <div className="mt-4 pt-4">
-                {/* <p className="text-gray-500">Quantity:</p> */}
                 <p className="mt-4">{food.date}</p>
               <div className="mt-1 flex items-center space-x-3">
                 {/* <button
@@ -114,7 +103,7 @@ function Detail() {
                   Add to cart ({total})
                 </button> */}
                 <div className="w-24 mt-5 border rounded py-2 px-8 bg-orange-900 hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed flex flex-row">
-                  <Link href="/Product">Back</Link>
+                  <Link href="/News">Back</Link>
                 </div>
               </div>
             </div>

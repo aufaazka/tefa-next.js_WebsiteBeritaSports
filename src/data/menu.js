@@ -5,7 +5,7 @@ export const menu = [
   },
   {
     label: 'News',
-    href: '/Product',
+    href: '/News',
   },
   {
     label: 'History',

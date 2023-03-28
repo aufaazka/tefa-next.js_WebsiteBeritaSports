@@ -1,19 +1,15 @@
 'use client'
-import Link from 'next/link'
+import Adds from '@/components/Adds';
 import React, { useEffect, useState } from 'react'
 
 function App() {
   const [data, setData] = useState([]);
-
-  const desc = data.desc;
-  const desci = desc.substr(0,100)
   const url = 'https://api.jsonbin.io/v3/b/6421398eace6f33a22fdd266'
   useEffect(() => {
     async function getData() {
       try {
-        const data = await fetch(url)
-        const result = await data.json()
-        console.log(result.record)
+        const response = await fetch(url)
+        const result = await response.json()
         setData(result.record)
       } catch (error) {
         console.log(error)
@@ -24,7 +20,6 @@ function App() {
 
   const [search, setSearch] = useState('')
   const [isLoading] = useState(false)
-  // const [searchParam] = useState(['name', 'description', 'category'])
   const [labelCategory] = useState([
     { value: 'All', label: 'All News' },
     { value: 'footbal', label: 'footbal' },
@@ -32,11 +27,9 @@ function App() {
     { value: 'badminton', label: 'badminton' },
   ])
   const [filterParam, setFilterParam] = useState('All')
-  const [product, setProduct] = useState(data)
-
-
+  const [news, setnews] = useState(data)
   useEffect(() => {
-    setProduct(data)
+    setnews(data)
   }, [])
 
   useEffect(() => {
@@ -45,36 +38,36 @@ function App() {
     const filteredData = data.filter((item) =>
       item.headline.toLowerCase().includes(searchTerm)
     )
-    setProduct(filteredData)
+    setnews(filteredData)
   }, [filterParam, search, data])
 
   console.log(filterParam)
 
   useEffect(() => {
     if (filterParam === 'All') {
-      setProduct(data)
+      setnews(data)
     } else {
       console.log(filterParam)
       const filter = data.filter(
         (item) => item.category.toLowerCase() === filterParam.toLowerCase()
       )
-      setProduct(filter)
-      console.log(product)
+      setnews(filter)
+    
     }
   }, [filterParam])
 
   return (
     <div className="container mx-auto mb-16">
       <div className="text-center font-bold">
-        <h1 className="text-4xl text-orange-900 mb-8 mt-20">
+        <h1 className="text-4xl text-red-700 mb-8 mt-20">
           Latest News
         </h1>
       </div>
 
-
+    <Adds/>
       <div className="flex max-w-lg rounded overflow-hidden my-4 mx-auto mt-0 space-x-7">
         <form className="w-full max-w-sm bg-white/60 p-1">
-          <div className="flex items-center border-b-2 border-orange-900 py-2">
+          <div className="flex items-center border-b-2 border-red-700 py-2">
             <input
               onChange={(e) => setSearch(e.target.value)}
               className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -88,7 +81,7 @@ function App() {
             onChange={(e) => {
               setFilterParam(e.target.value)
             }}
-            className="custom-select px-4 py-3 rounded-md hover:bg-stone-200  text-orange-900"
+            className="custom-select px-4 py-3 rounded-md hover:bg-stone-200  text-red-700"
             aria-label="Filter Food By Category"
           >
             {labelCategory.map((item) => {
@@ -123,36 +116,35 @@ function App() {
 
       )}
       {data.length !== 0 && (
+
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {product.map((image) => (
+          {news.map((image) => (
             <div>
-              <div
-                key={image.id}
+              <div key={image.id}
                 image={image}
                 coba={image.image}
-                className="bg-stone-200 text-sm lg:w-50 rounded-md overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ... bg-no-repeat "
-              >
+                className="bg-stone-200 text-sm lg:w-50 rounded-md overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ... bg-no-repeat ">
                 <img
                   src={image.image}
                   alt=""
                   className="w-full h-80 md:h-48 object-contain p-2 my-7"
                 />
                 <div className="px-6 py-2 mb-4 h-48">
-                  <div className="font-extrabold text-orange-900 text-sm text-justify mb-3 -mt-9">
+                  <div className="font-extrabold text-red-700 text-sm text-justify mb-3 -mt-9">
                     {image.headline}
                   </div>
                   <div className="text-black">
                     <div>
                       <ul>
-                        <li>{image.desc}</li>
+                        <li>{image.desc.slice(0, 50)+"..."}</li>
                         <li className="text-md mb-2 ">
                           <strong>{image.date}</strong>
                         </li>
                       </ul>
                     </div>
                     <a href={`/${image.id}`}
-                      className="bg-orange-400 h-10 rounded-b-lg dark:text-gray-900
-                      hover:bg-orange-500 text-center items-center p-2 absolute" > Read More </a>
+                      className="bg-red-700 h-10 rounded-b-lg text-white
+                      hover:bg-stone-200 hover:text-black text-center items-center p-2 absolute" > Read More </a>
                     {/* <div className="bg-orange-900 p-2 w-16 h-10 text-center rounded text-white">
                           <Link href={`/${image.url}`} key={image.url}>
                             Detail
