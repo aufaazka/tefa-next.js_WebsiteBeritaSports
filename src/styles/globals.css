@@ -16,6 +16,12 @@ h1, h2, h3 {
   @apply font-Poppins font-Poppins
 }
 
+footer {
+  padding-bottom: 10px;
+  padding-top: 60px;
+  background: #927D4D;
+}
+
 .bg-loading {
   background-image:url('/gambar/background.jpg')
 }
@@ -68,5 +74,16 @@ h1, h2, h3 {
   .primary_btn a,
   .secondary_btn a {
     font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding-top: 110px;
+  }
+
+  footer {
+    padding-top: 0;
+    border: none;
   }
 }
