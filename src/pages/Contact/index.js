@@ -34,29 +34,41 @@ export default function index() {
       className="flex flex-col lg:gap-14 lg:flex-col w-full"
     >
       <Head>
-        <title>About Sports Arena</title>
+        <title>About GArena</title>
         <meta name="description" content="About GArena" />
       </Head>
-
+      <div className="mb-auto mt-8 space-y-5 w-80 md:w-1/3 grid place-content-center text-center mx-auto md:mx-0">
+        <h1 className="text-3xl md:text-5xl font-medium md:w-[800px] mb-8 md:mb-0">
+          <TypewriterComponent
+            options={{
+              strings: ['Schedule of All Matches'],
+              changeDelay: 3,
+              changeDeleteSpeed: 2,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h1>
+      </div>
 
       <nav role="navigation">
         <ul className="flex flex-col md:flex-row justfiy-between flex-wrap -mb-8">
           <div className="md:flex md:flex-row grid-cols-3">
-            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-xl">
+            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-2xl">
               <a href="#Football Matches">Football</a>
             </li>
-            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-xl">
+            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-2xl">
               <a href="#Volley Matches">Volley</a>
             </li>
-            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-xl">
+            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-2xl">
               <a href="#Basketball Matches">Basketball</a>
             </li>
-            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-xl">
+            <li className="m-1 border border-red-700 rounded-full text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 text-2xl">
               <a href="#Badminton Matches">Badminton</a>
             </li>
           </div>
           <div className='ml-0 md:ml-auto mb-8 md:mb-0'>
-            <li className="m-1 border bg-red-700 border-red-700 rounded-full text-white hover:bg-red-700 hover:text-white px-4 py-2 ml-auto text-xl">
+            <li className="m-1 border bg-red-700 border-red-700 rounded-full text-white hover:bg-red-700 hover:text-white px-4 py-2 ml-auto text-2xl">
               <a href="#Contact us">Contact-Us</a>
             </li>
           </div>
@@ -67,13 +79,13 @@ export default function index() {
         id="Football Matches"
         className="flex flex-col lg:gap-14 lg:flex-col w-full"
       >
-        <span className="text-center text-white text-2xl mb-0 mt-[18px] py-5 bg-red-800 ">
+        <span className="text-center text-white text-4xl mb-0 mt-[18px] py-5 bg-red-800 ">
           Football Matches
         </span>
         <div className="mb-5 flex gap-8 py-9 lg:flex-row flex-wrap justify-center mx-auto">
           <ul className="grid grid-cols-2 md:grid-cols-4">
             {data.map((data) => (
-              <li className="bg-zinc-300 rounded-md overflow-hidden mx-8 mb-4 w-36 md:w-60 hover:shadow-xl text-left p-4">
+              <li className="bg-zinc-300 rounded-md overflow-hidden mx-8 mb-4 w-36 md:w-60 hover:shadow-2xl text-left p-4">
                 <Image
                   width={300}
                   height={350}
@@ -95,13 +107,13 @@ export default function index() {
         id="Volley Matches"
         className="flex flex-col lg:gap-14 lg:flex-col w-full"
       >
-        <span className="text-center text-white text-2xl mb-0 mt-2 py-5 bg-red-800 ">
+        <span className="text-center text-white text-4xl mb-0 mt-2 py-5 bg-red-800 ">
           Volly Matches
         </span>
         <div className="mb-2 flex gap-8 py-9 lg:flex-row flex-wrap justify-center mx-auto">
           <ul className="grid grid-cols-2 md:grid-cols-4">
             {dua.map((data) => (
-              <li className="bg-zinc-300 rounded-md overflow-hidden mx-8 mb-4 w-36 md:w-60 hover:shadow-xl text-left p-4">
+              <li className="bg-zinc-300 rounded-md overflow-hidden mx-8 mb-4 w-36 md:w-60 hover:shadow-2xl text-left p-4">
                 <Image
                   width={300}
                   height={350}
@@ -122,7 +134,7 @@ export default function index() {
         id="Basketball Matches"
         className="flex flex-col lg:gap-14 lg:flex-col w-full"
       >
-        <span className="text-center text-white text-2xl mb-0 mt-[18px] py-5 bg-red-800 ">
+        <span className="text-center text-white text-4xl mb-0 mt-[18px] py-5 bg-red-800 ">
           Basketball Matches
         </span>
         <div className="mb-2 flex gap-8 py-9 lg:flex-row flex-wrap justify-center mx-auto">
@@ -149,7 +161,7 @@ export default function index() {
         id="Badminton Matches"
         className="flex flex-col lg:gap-14 lg:flex-col w-full"
       >
-        <span className="text-center text-white text-2xl mb-0 mt-[18px] py-5 bg-red-800 ">
+        <span className="text-center text-white text-4xl mb-0 mt-[18px] py-5 bg-red-800 ">
           Badminton Matches
         </span>
         <div className="mb-2 flex gap-8 py-9 lg:flex-row flex-wrap justify-center mx-auto">
