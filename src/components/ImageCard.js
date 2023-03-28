@@ -2,7 +2,6 @@ import React from 'react'
 
 const ImageCard = ({ image }) => {
   const descproduct = image.desc
-  // const res = descproduct.slice(0, 20)+"..."
 
   return (
     <div className="bg-sky-100 lg:w-80 rounded-md overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ... bg-no-repeat ">

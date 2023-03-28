@@ -72,7 +72,7 @@ function App() {
               onChange={(e) => setSearch(e.target.value)}
               className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
-              placeholder="Find your Food..."
+              placeholder="Search news..."
             />
           </div>
         </form>
@@ -82,7 +82,7 @@ function App() {
               setFilterParam(e.target.value)
             }}
             className="custom-select px-4 py-3 rounded-md hover:bg-stone-200  text-red-700"
-            aria-label="Filter Food By Category"
+            aria-label="Filter news By Category"
           >
             {labelCategory.map((item) => {
               return <option value={item.value}>{item.label}</option>
@@ -145,11 +145,7 @@ function App() {
                     <a href={`/${image.id}`}
                       className="bg-red-700 h-10 rounded-b-lg text-white
                       hover:bg-stone-200 hover:text-black text-center items-center p-2 absolute" > Read More </a>
-                    {/* <div className="bg-orange-900 p-2 w-16 h-10 text-center rounded text-white">
-                          <Link href={`/${image.url}`} key={image.url}>
-                            Detail
-                          </Link>
-                        </div> */}
+
                   </div>
                 </div>
               </div>
