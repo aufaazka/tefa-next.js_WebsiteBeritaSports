@@ -20,13 +20,13 @@ export default function Header() {
   }
 
   return (
-<header className="md:p-2 bg-red-800">
-  <div className="flex justify-between mx-14 text-white text-xl uppercase font-bold font-PermanentMarker items-center">
+<header className="bg-red-800">
+  <div className="flex justify-between mx-14 text-zinc-100 text-sm uppercase font-semibold font-PermanentMarker items-center">
     <div className="flex gap-2 items-center">
       <div>
         <Image
-          width={200}
-          height={89}
+          width={150}
+          height={66}
           src={img}
           alt=""
           className="w-full md:w-fit h-full object-cover"

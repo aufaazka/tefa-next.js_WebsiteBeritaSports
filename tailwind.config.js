@@ -12,7 +12,7 @@ module.exports = {
       },
       fontFamily: {
         Poppins: "Poppins",
-        PermanentMarker: "Permanent Marker",
+        Montserrat: "Montserrat",
       },
       animation: {
         type: "type 2.7s ease-out .8s infinite alternate both",

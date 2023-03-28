@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
   @apply font-['poppins'] font-[poppins] scroll-smooth !important
@@ -27,7 +27,7 @@ footer {
 }
 
 .logo{
-  @apply font-PermanentMarker font-bold
+  @apply font-Montserrat
 }
 .primary_btn {
   background: #927D4D !important;

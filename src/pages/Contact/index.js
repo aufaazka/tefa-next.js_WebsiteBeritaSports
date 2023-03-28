@@ -34,22 +34,10 @@ export default function index() {
       className="flex flex-col lg:gap-14 lg:flex-col w-full"
     >
       <Head>
-        <title>About GArena</title>
+        <title>About Sports Arena</title>
         <meta name="description" content="About GArena" />
       </Head>
-      <div className="mb-auto mt-8 space-y-5 w-80 md:w-1/3 grid place-content-center text-center mx-auto md:mx-0">
-        <h1 className="text-3xl md:text-5xl font-medium md:w-[800px] mb-8 md:mb-0">
-          <TypewriterComponent
-            options={{
-              strings: ['Schedule of All Matches'],
-              changeDelay: 3,
-              changeDeleteSpeed: 2,
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </h1>
-      </div>
+
 
       <nav role="navigation">
         <ul className="flex flex-col md:flex-row justfiy-between flex-wrap -mb-8">

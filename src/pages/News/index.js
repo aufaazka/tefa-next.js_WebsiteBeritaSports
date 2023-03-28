@@ -81,7 +81,7 @@ function App() {
             onChange={(e) => {
               setFilterParam(e.target.value)
             }}
-            className="custom-select px-4 py-3 rounded-md hover:bg-stone-200  text-red-700"
+            className="custom-select px-4 py-3 rounded-md hover:bg-zinc-400  text-red-700"
             aria-label="Filter news By Category"
           >
             {labelCategory.map((item) => {
@@ -123,14 +123,14 @@ function App() {
               <div key={image.id}
                 image={image}
                 coba={image.image}
-                className="bg-stone-200 text-sm lg:w-50 rounded-md overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ... bg-no-repeat ">
+                className="bg-zinc-400 text-sm lg:w-50 rounded-md overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ... bg-no-repeat ">
                 <img
                   src={image.image}
                   alt=""
                   className="w-full h-80 md:h-48 object-contain p-2 my-7"
                 />
                 <div className="px-6 py-2 mb-4 h-48">
-                  <div className="font-extrabold text-red-700 text-sm text-justify mb-3 -mt-9">
+                  <div className="font-extrabold text-red-700 text-sm text-justify mb-4 -mt-9">
                     {image.headline}
                   </div>
                   <div className="text-black">

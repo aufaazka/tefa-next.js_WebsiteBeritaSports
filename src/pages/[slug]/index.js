@@ -19,9 +19,9 @@ function getFood(id) {
     }
     getData()
   }, [])
-  console.log("id = " + id);
+  console.log('id = ' + id)
   const item = data.find((e) => e.id === Number(id))
-  console.log("item = " + item);
+  console.log('item = ' + item)
   if (typeof item === 'object') {
     return item
   }
@@ -30,8 +30,8 @@ function getFood(id) {
 
 function Detail() {
   const router = useRouter()
-  const {slug} = router.query;
-  console.log("slug = " + slug)
+  const { slug } = router.query
+  console.log('slug = ' + slug)
   const food = getFood(slug)
 
   if (Object.keys(food).length === 1) {
@@ -68,38 +68,20 @@ function Detail() {
           {/* News's details */}
           <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6 mt-80 md:mt-24">
             <h2 className="text-3xl font-semibold">{food.headline}</h2>
-            <p className='w-80'>
-              Source : <a href={food.url} className="italic text-black hover:underline text-">{food.url}</a>
+            <p className="w-80">
+              Source :{' '}
+              <a
+                href={food.url}
+                className="italic text-black hover:underline text-"
+              >
+                {food.url}
+              </a>
             </p>
             <p className="mt-4">{food.desc}</p>
             <div className="mt-4 pt-4">
-                <p className="mt-4">{food.date}</p>
-              <div className="mt-1 flex items-center space-x-3">
-                {/* <button
-                  onClick={() => setQty((prev) => prev - 1)}
-                  disabled={qty <= 1}
-                  className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-rose-100 hover:text-orange-900 rounded-md p-1 border-0"
-                >
-                  <Minus />
-                </button>
-                <p className="font-semibold text-xl">{qty}</p>
-                <button
-                  onClick={() => setQty((prev) => prev + 1)}
-                  disabled={qty >= food.stock}
-                  className="hover:bg-green-100 hover:text-green-500 rounded-md p-1 border-0"
-                >
-                  <Plus />
-                </button> */}
-              </div>
+              <p className="mt-4">{food.date}</p>
+              <div className="mt-1 flex items-center space-x-3"></div>
               <div className="flex flex-col">
-                {/* <button
-                  type="button"
-                  onClick={handleOnAddToCart}
-                  disabled={adding}
-                  className="mt-8 border rounded py-2 px-6 bg-orange-900  hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed"
-                >
-                  Add to cart ({total})
-                </button> */}
                 <div className="w-24 mt-5 border rounded py-2 px-8 bg-orange-900 hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed flex flex-row">
                   <Link href="/News">Back</Link>
                 </div>
