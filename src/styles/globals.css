@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html {
   @apply font-['poppins'] font-[poppins] scroll-smooth !important
@@ -13,13 +13,13 @@ body {
 }
 
 h1, h2, h3 {
-  @apply font-Poppins
+  @apply font-Poppins font-Poppins
 }
 
 footer {
   padding-bottom: 10px;
   padding-top: 60px;
-  background: #927D4D;
+  background: #911B1B;
 }
 
 .bg-loading {
@@ -27,7 +27,7 @@ footer {
 }
 
 .logo{
-  @apply font-Montserrat
+  @apply font-Montserrat font-bold
 }
 .primary_btn {
   background: #927D4D !important;
@@ -58,12 +58,12 @@ footer {
 }
 ::-webkit-scrollbar {
   width: 10px;
-  background: #808dad;
+  background: #d09191;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2em;
-  background: #171f38;
+  background: #e37f7f;
 }
 
 @media only screen and (max-width: 992px) {

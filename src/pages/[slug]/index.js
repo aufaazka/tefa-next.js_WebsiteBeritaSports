@@ -37,52 +37,40 @@ function Detail() {
   if (Object.keys(food).length === 1) {
     return <div>Item not found</div>
   }
-
-  const [qty, setQty] = useState(1)
-  const [adding, setAdding] = useState(false)
-
-  const total = qty * food.price
-
-  const handleOnAddToCart = () => {
-    setAdding(true)
-    toastId.current = toast.loading(
-      `Adding ${qty} item${qty > 1 ? 's' : ''}...`
-    )
-    addItem(props, qty)
-  }
-
   return (
     <>
-      <div className="container lg:max-w-screen-lg mx-auto py-24 px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12">
-          {/* News's image */}
-          <div className="relative w-72 h-72 md:w-96 md:h-96 mb-12 ">
-            <img
-              src={food.image}
-              alt={food.name}
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-
+      <div className="items-center container lg:max-w-screen-lg mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-12">
           {/* News's details */}
-          <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6 mt-80 md:mt-24">
-            <h2 className="text-3xl font-semibold">{food.headline}</h2>
-            <p className="w-80">
+          <div className="flex-1 items-center max-w border border-opacity-50 rounded-md shadow-lg p-6 ">
+            {/* News's image */}
+            <div className="mx-auto relative md:w-96 md:h-96 ">
+              <img
+                src={food.image}
+                alt={food.name}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <h2 className="text-3xl font-semibold items-center mx-auto">
+              {food.headline}
+            </h2>
+            <p className="mt-6 w-7/8 truncate">
               Source :{' '}
               <a
                 href={food.url}
-                className="italic text-black hover:underline text-"
+                target="_blank"
+                className="italic text-black hover:underline mx-auto"
               >
                 {food.url}
               </a>
             </p>
             <p className="mt-4">{food.desc}</p>
-            <div className="mt-4 pt-4">
+            <div className="mt-4">
               <p className="mt-4">{food.date}</p>
-              <div className="mt-1 flex items-center space-x-3"></div>
+              <div className="mt-4 flex items-center space-x-3"></div>
               <div className="flex flex-col">
-                <div className="w-24 mt-5 border rounded py-2 px-8 bg-orange-900 hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed flex flex-row">
+                <div className="w-24 mt-4 border rounded py-2 px-8 bg-orange-900 hover:text-gray-600 hover:bg-gray-100 border-gray-600 hover:border-gray-600 focus:ring-4 focus:ring-opacity-50 focus:ring-gray-500 text-white transition-colors disabled:cursor-not-allowed flex flex-row">
                   <Link href="/News">Back</Link>
                 </div>
               </div>
