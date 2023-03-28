@@ -1,0 +1,48 @@
+.nav_menu {
+    display: flex;
+    align-items: center;
+    column-gap: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .nav_menu a {
+    color: #bfc0c0;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .nav_menu a:hover {
+    color: #F99417;
+  }
+  
+  
+  
+  .footer_creator {
+    margin-right: 4rem;
+  }
+  .footer_creator h6 {
+    text-align: right;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.852);
+  }
+  
+  .footer_copyright {
+    color: rgba(255, 255, 255, 0.852);
+    ;
+    border-top: 1px solid #808dad49;
+  }
+  .footer_copyright p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footer_top {
+      display: none;
+    }
+  }
+  

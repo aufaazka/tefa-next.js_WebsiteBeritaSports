@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "Title":"dummy 1" ,
+        "category": "HotBadminton",
+        "img":"/photo/1.jpg" 
+    },
+    {
+        "id": 2,
+        "Title":"dummy 2" ,
+        "category": "HotVolly",
+        "img":"/photo/2.jpg" 
+    },
+    {
+        "id": 3,
+        "Title":"dummy 3" ,
+        "category": "HotVolly",
+        "img":"/photo/3.jpg" 
+    },
+    {
+        "id": 4,
+        "Title":"dummy 4" ,
+        "category": "HotFootball",
+        "img":"/photo/4.jpg" 
+    }
+]
