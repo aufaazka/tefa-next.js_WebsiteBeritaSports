@@ -20,33 +20,23 @@ export default function Header() {
   }
 
   return (
-<header className="border-slate-500 mb-5 bg-zinc-300">
-  <div className="flex justify-between mx-10 text-blue-900 font-bold items-center">
+<header className="md:p-2 bg-red-800">
+  <div className="flex justify-between mx-14 text-white text-xl uppercase font-bold font-PermanentMarker items-center">
     <div className="flex gap-2 items-center">
       <div>
         <Image
-          width={60}
-          height={60}
+          width={200}
+          height={89}
           src={img}
           alt=""
-          className="w-full mt-6 md:w-fit h-full object-cover"
+          className="w-full md:w-fit h-full object-cover"
         />
       </div>
-      <div className="mx-7">
-        <a
-          href="/"
-          className="flex items-center justify-start uppercase text-2xl md:text-3xl text-blue-900 font-bold hover:text-black"
-        >
-          G
-          <span className="w-60 text-rose-500 hover:text-blue-900">
-            Arena
-          </span>
-        </a>
-      </div>
+    
     </div>
 
     <div className="sm:flex hidden justify-between">
-      <div className="flex gap-4">
+      <div className="flex gap-8">
         {menu.map((value, index) => (
           <div key={index}>
             <Link href={value.href}>

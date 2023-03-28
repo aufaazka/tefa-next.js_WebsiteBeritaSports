@@ -9,7 +9,7 @@ export const menu = [
   },
   {
     label: 'History',
-    href: '/About',
+    href: '/History',
   },
   {
     label: 'Matches',
