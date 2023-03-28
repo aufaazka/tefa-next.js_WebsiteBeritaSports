@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container, Row, Col } from "reactstrap";
 import classes from "../../styles/footer.module.css";
 import Link from "next/link";
-import img from '../../../public/photo/logo.png'
+import img from '../../../public/photo/Logo12.png'
 
 const NAV_LINK = [
   {
@@ -34,26 +34,15 @@ const Footer = () => {
         <Row>
           {/* ========= footer top =========== */}
           <Col lg="6" className={`${classes.footer_top}`}>
-            <div className="flex gap-2 items-center justify-between ml-5">
+            <div className="flex gap-2 mx-14 items-center justify-between ml-5">
               <div className="flex">
                 <Image
-                  width={90}
-                  height={80}
+                  width={200}
+                  height={89}
                   src={img}
                   alt=""
                   className="w-full mt-6 md:w-fit h-full object-cover"
                 />
-                <div className="mt-5 ml-2">
-                <a
-                  href="/"
-                  className="flex items-center justify-start uppercase text-2xl md:text-5xl text-blue-900 font-bold "
-                >
-                  G
-                  <span className="w-60 text-rose-500 hover:text-blue-900">
-                    Arena
-                  </span>
-                </a>
-              </div>
               </div>
            
             <div className={`${classes.footer_creator}`}>
